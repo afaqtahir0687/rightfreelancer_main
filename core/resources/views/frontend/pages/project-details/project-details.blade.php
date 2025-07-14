@@ -576,10 +576,11 @@
                                                     <ul class="list-style-none">
                                                         <li><span>{{ __('Revisions') }}</span></li>
                                                         <li><span>{{ __('Delivery time') }}</span></li>
+                                                        <li><span>{{ __('Package Details') }}</span></li>
                                                         @foreach ($project->project_attributes as $attr)
                                                             <li><span>{{ $attr->check_numeric_title }}</span></li>
                                                         @endforeach
-                                                        <li><span>{{ __('Package Details') }}</span></li>
+                                                        
                                                         <li><span>{{ __('Charges') }}</span></li>
                                                     </ul>
                                                 </div>
@@ -599,7 +600,12 @@
                                                     <ul class="list-style-none">
                                                         <li><span class="close-icon">{{ $project->basic_revision }}</span></li>
                                                         <li><span class="close-icon">{{ __($project->basic_delivery) }}</span></li>
-                                                      
+                                                        <li>
+                                                            <span class="close-icon" style="max-height: 3.4em; /* Approx. 1.5 lines */
+                                                                overflow-y: auto;">
+                                                                {{ $project->basic_details }}
+                                                            </span>
+                                                        </li>
                                                        @foreach ($project->project_attributes as $attr)
                                                             @if ($attr->standard_check_numeric == 'on')
                                                                 <li><span class="check-icon"> <i class="fas fa-check"></i>
@@ -615,12 +621,7 @@
                                                                 </li>
                                                             @endif
                                                         @endforeach
-                                                          <li>
-                                                            <span class="close-icon" style="max-height: 3.4em; /* Approx. 1.5 lines */
-                                                                overflow-y: auto;">
-                                                                {{ $project->basic_details }}
-                                                            </span>
-                                                        </li>
+                                                          
                                                         <li>
                                                             <div class="price">
                                                                 @if ($project->basic_discount_charge != null && $project->basic_discount_charge > 0)
@@ -652,7 +653,12 @@
                                                         </li>
                                                         <li><span class="close-icon">{{ __($project->standard_delivery) }} </span>
                                                         </li>
-                                                       
+                                                        <li>
+                                                            <span class="close-icon" style="max-height: 3.4em; /* Approx. 1.5 lines */
+                                                                overflow-y: auto;">
+                                                                {{ $project->standard_details }}
+                                                            </span>
+                                                        </li>
                                                         @foreach ($project->project_attributes as $attr)
                                                             @if ($attr->standard_check_numeric == 'on')
                                                                 <li><span class="check-icon"> <i class="fas fa-check"></i>
@@ -668,12 +674,7 @@
                                                                 </li>
                                                             @endif
                                                         @endforeach
-                                                         <li>
-                                                            <span class="close-icon" style="max-height: 3.4em; /* Approx. 1.5 lines */
-                                                                overflow-y: auto;">
-                                                                {{ $project->standard_details }}
-                                                            </span>
-                                                        </li>
+                                                        
                                                         <li>
                                                             <div class="price">
                                                                 @if ($project->standard_discount_charge != null && $project->standard_discount_charge > 0)
@@ -706,7 +707,12 @@
                                                         </li>
                                                         <li><span class="close-icon">{{ __($project->premium_delivery) }}</span>
                                                         </li>
-
+                                                        <li>
+                                                            <span class="close-icon" style="max-height: 3.4em; /* Approx. 1.5 lines */
+                                                                overflow-y: auto;">
+                                                                {{ $project->premium_details }}
+                                                            </span>
+                                                        </li>
                                                         @foreach ($project->project_attributes as $attr)
                                                             @if ($attr->premium_check_numeric == 'on')
                                                                 <li><span class="check-icon"> <i class="fas fa-check"></i>
@@ -719,13 +725,6 @@
                                                                         {{ $attr->premium_check_numeric }} </span></li>
                                                             @endif
                                                         @endforeach
-                                                        
-                                                        <li>
-                                                            <span class="close-icon" style="max-height: 3.4em; /* Approx. 1.5 lines */
-                                                                overflow-y: auto;">
-                                                                {{ $project->premium_details }}
-                                                            </span>
-                                                        </li>
                                                         <li>
                                                             <div class="price">
                                                                 @if ($project->premium_discount_charge != null && $project->premium_discount_charge > 0)
@@ -806,6 +805,14 @@
                                                     <strong class="right">{{ __($project->basic_delivery) }}</strong>
                                                 </div>
                                             </div>
+                                                 @if (!empty($project->basic_details))
+                                                    <div class="project-preview-tab-header-item mt-3">
+                                                        <div class="project-description-text mt-2">
+                                                            {!! nl2br(e($project->basic_details)) !!}
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                <hr>
                                             <div class="project-preview-tab-inner mt-4">
                                                  @foreach ($project->project_attributes as $attr)
                                                     <div class="project-preview-tab-inner-item">
@@ -821,14 +828,7 @@
                                                         @endif
                                                     </div>
                                                 @endforeach
-                                                @if (!empty($project->basic_details))
-                                                    <div class="project-preview-tab-header-item mt-3">
-                                                        <div class="project-description-text mt-2">
-                                                            {!! nl2br(e($project->basic_details)) !!}
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                                <hr>
+                                                
                                                 <div class="project-preview-tab-inner-item">
                                                     @if ($project->basic_discount_charge != null && $project->basic_discount_charge > 0)
                                                         <span class="left price-title">{{ __('Price') }}</span>
@@ -856,6 +856,14 @@
                                                     <strong class="right">{{ __($project->standard_delivery) }}</strong>
                                                 </div>
                                             </div>
+                                             @if (!empty($project->standard_details))
+                                                    <div class="project-preview-tab-header-item mt-3">
+                                                        <div class="project-description-text mt-2">
+                                                            {!! nl2br(e($project->standard_details)) !!}
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                <hr>
                                             <div class="project-preview-tab-inner mt-4">
                                                 @foreach ($project->project_attributes as $attr)
                                                     <div class="project-preview-tab-inner-item">
@@ -871,14 +879,7 @@
                                                         @endif
                                                     </div>
                                                 @endforeach
-                                                 @if (!empty($project->standard_details))
-                                                    <div class="project-preview-tab-header-item mt-3">
-                                                        <div class="project-description-text mt-2">
-                                                            {!! nl2br(e($project->standard_details)) !!}
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                                <hr>
+                                                
                                                 <div class="project-preview-tab-inner-item">
                                                     @if ($project->standard_discount_charge != null && $project->standard_discount_charge > 0)
                                                         <span class="left price-title">{{ __('Price') }}</span>
@@ -906,6 +907,14 @@
                                                     <strong class="right">{{ __($project->premium_delivery) }}</strong>
                                                 </div>
                                             </div>
+                                              @if (!empty($project->premium_details))
+                                                    <div class="project-preview-tab-header-item mt-3">
+                                                        <div class="project-description-text mt-2">
+                                                            {!! nl2br(e($project->premium_details)) !!}
+                                                        </div>
+                                                    </div>
+                                                @endif
+                                                <hr>
                                             <div class="project-preview-tab-inner mt-4">
                                                 @foreach ($project->project_attributes as $attr)
                                                     <div class="project-preview-tab-inner-item">
@@ -921,14 +930,7 @@
                                                     </div>
                                                 @endforeach
 
-                                                 @if (!empty($project->premium_details))
-                                                    <div class="project-preview-tab-header-item mt-3">
-                                                        <div class="project-description-text mt-2">
-                                                            {!! nl2br(e($project->premium_details)) !!}
-                                                        </div>
-                                                    </div>
-                                                @endif
-                                                <hr>
+                                               
                                                 <div class="project-preview-tab-inner-item">
                                                     @if ($project->premium_discount_charge != null && $project->premium_discount_charge > 0)
                                                         <span class="left price-title">{{ __('Price') }}</span>
