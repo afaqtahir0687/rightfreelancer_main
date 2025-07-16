@@ -237,9 +237,14 @@ Route::group(['middleware' => ['globalVariable', 'maintains_mode','setlang', 'ch
         Route::put('/ad/update', 'adUpdate')->name('ad.update');        
         Route::delete('delete/{id}', 'destroy')->name('ad.delete');
 
-
         Route::view('contact-us', 'frontend.pages.contact-us')->name('frontend.dynamic.page');
         Route::get('dynamic/{slug}', 'dynamic_single_page')->name('frontend.dynamic.page');
+
+
+        Route::view('/escrow-policy', 'frontend.pages.escrow-policy')->name('escrow-policy');
+        Route::view('/partnership', 'frontend.pages.partnership')->name('partnership');
+
+
     });
 
     // freelancer public profile view

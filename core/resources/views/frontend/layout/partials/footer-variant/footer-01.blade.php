@@ -137,23 +137,23 @@
                         <div class="footer-widget-inner mt-4">
                             <ul class="footer-widget-link-list">
                                 <li class="footer-widget-link-list-item">
-                                    <a href="{{url('https://www.rightfreelancer.com/talents')}}">Freelancers by Skill</a>
+                                    <a href="{{url('talents')}}">Freelancers by Skill</a>
+                                </li>
+                                <!-- <li class="footer-widget-link-list-item">
+                                    <a href="{{url('escrow-policy')}}">Escrow Policy</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
-                                    <a href="{{url('#')}}">Freelancers in USA</a>
+                                    <a href="{{url('#')}}">Refund Policy</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
-                                    <a href="{{url('#')}}">Freelancers in Australia</a>
+                                    <a href="{{url('#')}}">IP Claims</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
-                                    <a href="{{url('#')}}">Freelancers in UK</a>
+                                    <a href="{{url('#')}}">Project Gig Posting Polciy</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
-                                    <a href="{{url('#')}}">Freelancers in Saudi Arabia</a>
-                                </li>
-                                <li class="footer-widget-link-list-item">
-                                    <a href="{{url('#')}}">Freelancers in UAE</a>
-                                </li>
+                                    <a href="{{url('partnership')}}">Partnership</a>
+                                </li> -->
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{url('jobs')}}">Find Jobs</a>
                                 </li>
