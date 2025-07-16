@@ -13,6 +13,7 @@ use App\Models\ProjectHistory;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -155,12 +156,15 @@ class ProjectController extends Controller
 
         $request->validate([
             'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
+            'slug' => 'required|string|max:255|unique:projects,slug,' . $project->id,
         ]);
 
+        $slug = Str::slug(purify_html($request->slug));
         $description = strip_tags($request->description);
+
         $project->update([
             'title' => $request->title,
+            'slug' => $slug,
             'description' => $description,
         ]);
 
