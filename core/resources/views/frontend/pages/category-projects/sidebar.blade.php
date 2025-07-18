@@ -1,3 +1,8 @@
+<style>
+    .inactive-star {
+        color: #ccc;
+    }
+</style>
 <div class="shop-sidebar-content">
     <div class="shop-close-content">
         <div class="shop-close-content-icon"> <i class="fas fa-times"></i> </div>
@@ -81,40 +86,49 @@
                 <div class="single-shop-left-inner margin-top-15">
                     <div class="single-shop-left-select">
                         <ul class="filter-lists active-list">
+                            <!-- 5 Star -->
                             <li class="list" data-rating="5">
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
                             </li>
+
+                            <!-- 4 Star -->
                             <li class="list" data-rating="4">
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
                             </li>
+
+                            <!-- 3 Star -->
                             <li class="list" data-rating="3">
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
                             </li>
+
+                            <!-- 2 Star -->
                             <li class="list" data-rating="2">
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
                             </li>
+
+                            <!-- 1 Star -->
                             <li class="list" data-rating="1">
-                                <a href="javascript:void(0)"> <i class="fas fa-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
-                                <a href="javascript:void(0)"> <i class="lar la-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star active-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
+                                <a href="javascript:void(0)"> <i class="fas fa-star inactive-star"></i> </a>
                             </li>
                         </ul>
                     </div>

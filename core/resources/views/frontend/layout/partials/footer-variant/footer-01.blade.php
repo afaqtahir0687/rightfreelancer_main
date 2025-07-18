@@ -59,9 +59,12 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 mt-4">
                     <div class="footer-widget widget">
-                        <h4 class="footer-widget-title">Freelancer</h4>
+                        <h4 class="footer-widget-title">Talents</h4>
                         <div class="footer-widget-inner mt-4">
                             <ul class="footer-widget-link-list">
+                                  <li class="footer-widget-link-list-item">
+                                    <a href="{{url('win-work-with-rewards')}}">Win Works and Rewards</a>
+                                </li>
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{url('jobs')}}">Jobs</a>
                                 </li>
@@ -111,9 +114,8 @@
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{route('terms-of-service')}}">Terms of Service</a>
                                 </li>
-                               
-                                <li class="footer-widget-link-list-item">
-                                    <a href="{{url('win-work-with-rewards')}}">Win Works and Rewards</a>
+                                 <li class="footer-widget-link-list-item">
+                                    <a href="{{url('partnership')}}">Partnership</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{route('investor-relations')}}">Investor Relations</a>
@@ -150,9 +152,6 @@
                                 </li>
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{url('#')}}">Project Gig Posting Polciy</a>
-                                </li>
-                                <li class="footer-widget-link-list-item">
-                                    <a href="{{url('partnership')}}">Partnership</a>
                                 </li> -->
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{url('jobs')}}">Find Jobs</a>
