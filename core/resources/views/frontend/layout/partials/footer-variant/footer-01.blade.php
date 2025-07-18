@@ -69,7 +69,7 @@
                                     <a href="{{url('jobs')}}">Jobs</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
-                                    <a href="{{url('https://www.rightfreelancer.com/categories/website-development')}}">Categories</a>
+                                    <a href="{{url('categories/website-development')}}">Categories</a>
                                 </li>
                                 <li class="footer-widget-link-list-item">
                                     <a href="{{url('projects')}}">Projects (gigs)</a>
